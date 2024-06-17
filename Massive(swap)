@@ -1,0 +1,63 @@
+/*
+5
+1 2 3 4 5
+5 4 3 2 1 
+*/
+import java.util.Scanner;
+
+import static com.sun.tools.javac.jvm.ByteCodes.swap;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int a, sum = 0, l = 0, r = 0;
+        a = in.nextInt();
+
+        int[] mass = new int[a];
+        for (int i = 0; i < a; i++) {
+            mass[i] = in.nextInt();
+        }
+
+        for(int i = a-1; i>=0; i--){
+            System.out.print(mass[i]+ " ");
+            
+        }
+    }
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int a = in.nextInt();
+
+        int[] mass = new int[a];
+        for (int i = 0; i < a; i++) {
+            mass[i] = in.nextInt();
+        }
+
+        // Swapping elements
+        for (int i = 0; i < a / 2; i++) {
+            swap(mass, i, a - i - 1);
+            printArray(mass);
+        }
+    }
+
+    // Swap method for an array
+    public static void swap(int[] array, int i, int j) {
+        int temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+
+    // Method to print the array
+    public static void printArray(int[] array) {
+        for (int value : array) {
+            System.out.print(value + " ");
+        }
+        System.out.println();
+    }
+}
+
+
