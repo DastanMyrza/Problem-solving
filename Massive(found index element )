@@ -1,0 +1,35 @@
+/*
+5
+4 5 6 8 7 
+7
+
+4
+*/
+
+import java.util.Scanner;
+    public class Main {
+        public static void main(String[] args) {
+            Scanner in = new Scanner(System.in);
+            int a, sum = 0, l = 0, r = 0,t;
+            a = in.nextInt();
+            t = in.nextInt();
+
+            int[] mass = new int[a];
+            for (int i = 0; i < a; i++) {
+                mass[i] = in.nextInt();
+            }
+        boolean f = false;
+            for(int i = 0; i< a; i++){
+                if (mass[i] == t){
+                  System.out.println(i);
+                  f = true;
+                  break;
+              }
+
+            }
+            
+            if (!f){
+                System.out.println("Not found");
+            }
+        }
+    }
