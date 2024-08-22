@@ -1,0 +1,62 @@
+import java.util.Scanner;
+public class Main {
+        public static void main(String[] args) {
+            Scanner in = new Scanner(System.in);
+            int[][] mass = new int[100][100];
+            int n,m,min=Integer.MAX_VALUE,mini = 0,minj = 0,max = Integer.MIN_VALUE;
+            int maxi=0,maxj=0,temp=0;
+                n = in.nextInt();
+                m = in.nextInt();
+
+            for (int i = 0; i<n; i++){
+                for (int j= 0; j<m;j++){
+                    mass[i][j]=(int) (Math.random()*10);
+                }
+            }
+
+            for (int i = 0; i<n; i++){
+                for (int j= 0; j<m;j++){
+                    System.out.print(mass[i][j] + " ");
+                }
+                System.out.println();
+            }
+
+            for (int i = 0; i<n; i++){
+                for (int j= 0; j<m;j++) {
+                    if (mass[i][j] < min) {
+                        min = mass[i][j];
+                        mini = i;
+                        minj = j;
+                    }
+                }
+            }
+            System.out.println();
+            System.out.println("Минимальный число="+min + " i="+ mini + " j=" + minj);
+
+            for (int i = 0; i<n; i++){
+                for (int j= 0; j<m;j++) {
+                    if (mass[i][j] > max) {
+                        max = mass[i][j];
+                        maxi = i;
+                        maxj = j;
+                       }
+                }
+            }
+            System.out.println();
+            System.out.println("Максимальный число="+max + " i="+ maxi + " j=" + maxj);
+
+
+
+            System.out.println(min + " "+ max);
+
+            for (int i = 0; i<n; i++){
+                for (int j= 0; j<m;j++) {
+                    temp = min;
+                    min = max;
+                    max = temp;
+                    System.out.print(mass[i][j] + " ");
+                    }
+                System.out.println();
+                }
+            }
+        }
