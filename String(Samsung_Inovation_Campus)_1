@@ -1,0 +1,17 @@
+//1. Вводится три слова подряд - фамилия имя отчество (все маленькими буквами). Вывести в формате "Фамилия И.О." (Фамилия и инициалы, все начинается с большой буквы)
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String lastName,firstName,Ot;
+        lastName = in.next();
+        firstName = in.next();
+        Ot = in.next();
+
+        System.out.println(lastName.toUpperCase().charAt(0) + lastName.substring(1));
+        System.out.println(firstName.toUpperCase().charAt(0) + firstName.substring(1));
+        System.out.println(Ot.toUpperCase().charAt(0) + Ot.substring(1));
+
+    }
+}
