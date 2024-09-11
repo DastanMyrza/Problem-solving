@@ -1,0 +1,19 @@
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n,a1,d;
+        n = in.nextInt();
+        a1 = in.nextInt();
+        d = in.nextInt();
+        int[] arr = new int[n];
+
+        for (int i = 0; i<n;i++){
+            arr[i] = a1 + d * i;
+        }
+        for (int j = 0; j < n; j++) {
+            System.out.println(arr[j]);
+        }
+    }
+}
