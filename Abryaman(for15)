@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class OKK {
+    public static void main(String[] args) {
+        double a,n;
+        Scanner in =new Scanner(System.in);
+        a = in.nextInt();
+        n = in.nextInt();
+        double sum=1;
+        for (double i = 0; i < n; i++) {
+                 sum*=a;
+            System.out.println(sum);
+
+            }
+        }
+    }
