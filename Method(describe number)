@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class Methods {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int a = in.nextInt();
+        System.out.println(describeNumber(a));
+    }
+    public static String describeNumber(int a){
+        if (a > 0) {
+            if (a%2==0) {
+                return "чётное положительное";
+            }
+            else {
+                return "нечётное положительное";
+            }
+        } else if (a < 0) {
+            if (a%2==0) {
+                return "чётное отрицательное";
+            }
+            else {
+                return "нечётное отрицательное";
+            }
+        }
+        else {
+            return "ноль";
+        }
+    }
+}
