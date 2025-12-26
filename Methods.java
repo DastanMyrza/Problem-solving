@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class Methods {
+    //Задача 1.1: Сумма двух чисел
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        double a = in.nextDouble();
+        double b = in.nextDouble();
+        System.out.println(sum(a,b));
+    }
+
+    public static double sum(double a, double b){
+        return a + b;
+    }
+}
+
+
