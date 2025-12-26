@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Methods {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int a = in.nextInt();
+        int b = in.nextInt();
+        int c = in.nextInt();
+
+        System.out.println(max3(a,b,c));
+
+    }
+
+    public static int max3(int a, int b, int c){
+        int m = a;
+        if (b > m) { m = b;}
+        if (c > m) { m = c;}
+        return m;
+    }
+}
